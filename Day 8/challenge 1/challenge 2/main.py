@@ -1,6 +1,6 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
@@ -24,11 +24,28 @@ def encrypt(massage,shift):
     for i in massage:
         # massage[i] = alphabet[alphabet.index[massage[i]] + shift]
         position = alphabet.index(i)
-        new_pos = position + shift
+        new_pos = (position + shift)%26
         temp = alphabet[new_pos]
         ans += temp
-    print(ans)
+    # print(ans)
+    return ans
+
+
+def decript(message, shift):
+    ans = ''
+    for i in message:
+        position = alphabet.index(i)
+        new_pos = (position - shift) % 26
+        ans += alphabet[new_pos]
+    return ans
+
 
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
 
-encrypt(text,4)
+
+
+encripted = encrypt(text,4)
+print(encripted)
+
+decripted = decript(encripted,4)
+print(decripted)
