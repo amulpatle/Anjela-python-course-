@@ -16,5 +16,16 @@ planning_to_travel = [
     }
 ]
 
+
+def add_new_data(name,visited,times):
+    new_country = {}
+    new_country["country"] = name
+    new_country["visited"] = visited
+    new_country["times"] = times
+    
+    planning_to_travel.append(new_country)
+
+
+add_new_data("mashrashtra","mumbai",2)
 for i in  planning_to_travel:
     print(i)
