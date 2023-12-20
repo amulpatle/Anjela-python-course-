@@ -1,14 +1,15 @@
 from turtle import Turtle, Screen
 import random
 
-direction = []
-
-tim = Turtle
+tim = Turtle()
 screen = Screen()
-
-angle = [1,90,180]
-
-for i in range(20):
-    tim.forward(random.choice(360/angle))
+colors = ["royal blue","firebrick","violet","purple","red","pink","forest green	","orange"]
+direction = [0,90,180,270]
+tim.width(7)
+for _ in range(200):
+    tim.forward(30)
+    tim.color(random.choice(colors))
+    tim.setheading(random.choice(direction))
     
-# screen.mainloop()
+screen.exitonclick()
+screen.exitonclick()
