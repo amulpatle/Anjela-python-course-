@@ -7,5 +7,5 @@ def move_forward():
     tim.forward(10)
 
 screen.listen()
-screen.onkey(key="space",fun = move_forward)
+screen.onkey(key="space",fun = move_forward)#pass fucntion to another function 
 screen.exitonclick()
