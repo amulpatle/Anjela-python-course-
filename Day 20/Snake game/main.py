@@ -28,6 +28,6 @@ while is_game_on:
     screen.update()
     for seg in segment:
         seg.forward(20)
-        time.sleep(0.3)
+        time.sleep(0.1)
 
 screen.exitonclick()
