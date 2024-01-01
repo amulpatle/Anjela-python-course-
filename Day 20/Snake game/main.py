@@ -8,22 +8,9 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
-# segment_position = [(0,0),(-20,0),(-40,0)]
-# segment1 = Turtle(shape="square")
-# segment1.color("white")
 
 is_game_on = True
 
-# segment = []
-
-# for position in segment_position:
-#     segment1 = Turtle(shape="square")
-#     segment1.color("white")
-#     segment1.penup()
-#     segment1.goto(position)
-#     segment.append(segment1)
-
-# screen.update()
 
 snake = Snake()
 
