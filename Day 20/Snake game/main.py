@@ -26,8 +26,11 @@ for position in segment_position:
 
 while is_game_on:
     screen.update()
-    for seg in segment:
-        seg.forward(20)
-        time.sleep(0.1)
+    time.sleep(0.1)
+    for seg_num in range(len(segment) -1, 0, -1):
+        new_x = segment[seg_num -1].xcor()
+        new_y = segment[seg_num- 1].ycor()
+        segment[seg_num].goto(new_x,new_y)
+    segment[0].forward(20)
 
 screen.exitonclick()
