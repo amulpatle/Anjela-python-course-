@@ -16,4 +16,18 @@ paddle.penup()
 paddle.goto(350,0)
 
 
+screen.listen()
+
+def go_up():
+    new_y = paddle.ycor() + 20
+    paddle.goto(paddle.xcor(),new_y)
+
+def go_down():
+    new_y = paddle.ycor() - 20
+    paddle.goto(paddle.xcor(),new_y)
+
+screen.onkey(go_up,"Up")
+screen.onkey(go_down,"Down")
+
+
 screen.exitonclick()
