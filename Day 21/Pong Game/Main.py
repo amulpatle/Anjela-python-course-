@@ -1,10 +1,12 @@
 from turtle import Screen
 from turtle import Turtle
 from paddle import Paddle
+from ball import Ball
 
 
 screen = Screen()
 paddle = Turtle()
+ball = Ball()
 l_paddle = Paddle((-350,0))
 r_paddle = Paddle((350,0))
 
@@ -15,7 +17,6 @@ screen.title("pong")
 
 
 screen.listen()
-
 screen.onkey(r_paddle.go_up,"Up")
 screen.onkey(r_paddle.go_down,"Down")
 screen.onkey(l_paddle.go_up,"w")
