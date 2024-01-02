@@ -40,10 +40,12 @@ while is_game_on:
     # Detect right paddle misses
     if ball.xcor() > 380:
         ball.move_center()
+        scorecard.l_point()
     
     # Detect left paddle misses
     if ball.xcor() < -380:
         ball.move_center()
+        scorecard.r_point()
         
         
         
