@@ -3,11 +3,13 @@ from turtle import Turtle
 from paddle import Paddle
 from ball import Ball
 import time
+from scorecard import Scorecard
 
 
 screen = Screen()
 paddle = Turtle()
 ball = Ball()
+scorecard = Scorecard()
 l_paddle = Paddle((-350,0))
 r_paddle = Paddle((350,0))
 
