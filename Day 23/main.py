@@ -36,5 +36,6 @@ while game_is_on:
         player.move_to_start()
         # when player succefull touch the line it will increase the speed of cars next time
         car_manager.level_up()
+        scoreboard.increase_level()
 
 screen.exitonclick()
