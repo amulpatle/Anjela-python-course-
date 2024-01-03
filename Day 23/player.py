@@ -23,8 +23,8 @@ class Player(Turtle):
         else:
             return False
     def move_to_start(self):
-        if self.is_at_finish_line():
-            self.goto(STARTING_POSITION)
+        
+        self.goto(STARTING_POSITION)
             
 
     
