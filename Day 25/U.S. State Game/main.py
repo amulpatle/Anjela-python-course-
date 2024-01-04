@@ -25,6 +25,11 @@ while len(guessed_states) < 50:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 State Correct", prompt="What is another state name").title()
     
     if answer_state == "Exit":
+        missing_state = []
+        for state in state_li:
+            if state not in guessed_states:
+                missing_state.append(state)
+        print(missing_state)
         break
     
     if answer_state in state_li:
@@ -40,4 +45,4 @@ while len(guessed_states) < 50:
 
 
 turtle.onscreenclick(get_mouse_click_coor)
-turtle.mainloop()
+
