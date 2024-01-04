@@ -14,20 +14,24 @@ screen.bgpic(image)
 data = pandas.read_csv("/home/amul/Documents/anjela python/Day 25/U.S. State Game/50_states.csv")
 state_li = data.state.to_list()
 # print(state)
-
-
-answer_state = screen.textinput(title="Guess the State", prompt="What is another state name")
-
 def get_mouse_click_coor(x,y):
     print(x,y)
 
-if answer_state in state_li:
-    t = turtle.Turtle()
-    t.penup()
-    t.hideturtle()
-    state_data = data[data.state == answer_state]
-    t.goto(int(state_data.x),int(state_data.y))
-    t.write(answer_state)
+
+guessed_states = []
+
+while len(guessed_states) < 50:
+
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 State Correct", prompt="What is another state name").title()
+
+    if answer_state in state_li:
+        guessed_states.append(answer_state)
+        t = turtle.Turtle()
+        t.penup()
+        t.hideturtle()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x),int(state_data.y))
+        t.write(answer_state)
     
 
 
