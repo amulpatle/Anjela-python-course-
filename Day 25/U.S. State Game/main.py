@@ -23,7 +23,10 @@ guessed_states = []
 while len(guessed_states) < 50:
 
     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 State Correct", prompt="What is another state name").title()
-
+    
+    if answer_state == "Exit":
+        break
+    
     if answer_state in state_li:
         guessed_states.append(answer_state)
         t = turtle.Turtle()
