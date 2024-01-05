@@ -6,3 +6,8 @@ name = "Amul"
 
 new_name = [letter for letter in name]
 print(new_name)
+
+names = ["Amul","Saurav","Pratik","Ashish","Ankit","Nikki","Mansi"]
+
+name_list = [name.upper() for name in names if len(name) <= 5]
+print(name_list)
