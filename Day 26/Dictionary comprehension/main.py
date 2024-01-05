@@ -28,3 +28,14 @@ print(sunny_weather)
 
 desc_cities = {key:("Warm" if value >= 40 else "Cold") for(key,value) in cities_in_F.items()}
 print(desc_cities)
+
+def check_temp(value):
+    if value < 40:
+        return "COLD"
+    elif value < 40 and value > 55:
+        return "CLOUDY"
+    else:
+        return "HOT"
+
+desc_cities2 = {key: check_temp(value) for(key,value) in cities_in_F.items()}
+print(desc_cities2)
