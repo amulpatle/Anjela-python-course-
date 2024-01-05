@@ -25,3 +25,6 @@ weather = {'New York' : "snowing",
 sunny_weather = {key:value for(key,value) in weather.items() if value == "sunny"}
 
 print(sunny_weather)
+
+desc_cities = {key:("Warm" if value >= 40 else "Cold") for(key,value) in cities_in_F.items()}
+print(desc_cities)
