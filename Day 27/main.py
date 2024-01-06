@@ -18,4 +18,11 @@ def button_clicked():
 button = Button(text="click", command=button_clicked)
 button.pack()
 
+
+#entery class
+
+input = Entry()
+input.pack()
+
+
 window.mainloop()
