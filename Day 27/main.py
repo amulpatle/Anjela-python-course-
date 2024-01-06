@@ -23,6 +23,8 @@ button.pack()
 
 input = Entry()
 input.pack()
+txt = input.get()
+print(txt)
 
 
 window.mainloop()
