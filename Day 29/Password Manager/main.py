@@ -49,7 +49,7 @@ def save():
         if is_ok:
         
             with open("/home/amul/Documents/anjela python/Day 29/Password Manager/data.json",'a') as data_file:
-                # data_file.write(f"{website} | {email} | {password}\n")
+                
                 json.dump(new_data,data_file,indent=4)
                 website_entry.delete(0,END)
                 password_entry.delete(0,END)
