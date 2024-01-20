@@ -75,7 +75,7 @@ three_articles = articals[:3]
 
 #TODO 8. - Create a new list of the first 3 article's headline and description using list comprehension.
 
-formatted_articles = [f"headline : {articals['title']}.\nBrief:{article['description']}" for article in three_articles]
+formatted_articles = [f" headline : {articals['title']}.\nBrief:{article['description']}" for article in three_articles]
 
 print(formatted_articles)
 
